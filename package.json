@@ -1,0 +1,21 @@
+{
+  "name": "@yashpriyam/gis-shared",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yashpriyam/gis-shared.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "sequelize": "^6.3.5",
+    "sequelize-typescript": "^2.1.2",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}
