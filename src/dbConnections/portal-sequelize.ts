@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
-import { User } from './portal-models/user.model';  // Import all your models here
+import { User } from '../portal-models/user.model';  // Import all your models here
 
 const sequelize = new Sequelize({
     dialect: 'postgres',

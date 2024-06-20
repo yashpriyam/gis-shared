@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
-import { NoUser } from './core-ml-models/user.model';  // Import all your models here
+import { NoUser } from '../core-ml-models/user.model';  // Import all your models here
 
 const sequelize = new Sequelize({
     dialect: 'postgres',
