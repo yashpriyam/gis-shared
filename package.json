@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/yashpriyam/gis-shared.git"
   },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
