@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
 import { NoUser } from '../core-ml-models/user.model';  // Import all your models here
 
-const sequelize = new Sequelize({
+export const coreMlSequelize = new Sequelize({
     database: process.env.CORE_ML_DB_NAME || 'core_ml',
     username: process.env.CORE_ML_DB_USER || 'user',
     password: process.env.CORE_ML_DB_PASSWORD || 'password',
@@ -11,4 +11,3 @@ const sequelize = new Sequelize({
     models: [NoUser],
   });
 
-export default sequelize;

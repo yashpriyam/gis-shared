@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
 import { User } from '../portal-models/user.model';  // Import all your models here
 
-const sequelize = new Sequelize({
+export const portalSequelize = new Sequelize({
     database: process.env.PORTAL_DB_NAME || 'portal',
     username: process.env.PORTAL_DB_USER || 'user',
     password: process.env.PORTAL_DB_PASSWORD || 'password',
@@ -11,4 +11,4 @@ const sequelize = new Sequelize({
     models: [User],
   });
 
-export default sequelize;
+
