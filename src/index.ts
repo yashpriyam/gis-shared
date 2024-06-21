@@ -1,4 +1,2 @@
-export { portalSequelize } from './dbConnections/portal-sequelize';
-export { coreMlSequelize } from './dbConnections/core-ml-sequelize';
-export * from './portal-models';
-export * from './core-ml-models';
+export * from "./database-setup"
+export * from "./exceptions"
