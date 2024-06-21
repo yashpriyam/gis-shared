@@ -1,10 +1,10 @@
 import { Table, Column, Model, DataType } from 'sequelize-typescript';
 
 @Table({
-    timestamps: true,
-    tableName: 'users'
+    tableName: 'organizations',
+    timestamps: true
 })
-export class User extends Model {
+export class Organization extends Model {
     @Column({
         type: DataType.INTEGER.UNSIGNED,
         autoIncrement: true,
@@ -14,46 +14,14 @@ export class User extends Model {
 
     @Column({
         type: DataType.STRING(255),
-        allowNull: false
+        allowNull: false,
+        unique: true
     })
     name!: string;
 
     @Column({
-        type: DataType.STRING(255),
-        allowNull: false,
-        unique: true
-    })
-    email!: string;
-
-    @Column({
-        type: DataType.STRING(255),
-        allowNull: false
-    })
-    password!: string;
-
-    @Column({
-        type: DataType.STRING(10),
-        allowNull: false
-    })
-    phone!: string;
-
-    @Column({
         type: DataType.BOOLEAN,
-        allowNull: true,
         defaultValue: true
-    })
-    online?: boolean;
-
-    @Column({
-        type: DataType.INTEGER,
-        allowNull: true
-    })
-    credits?: number;
-
-    @Column({
-        type: DataType.BOOLEAN,
-        allowNull: true,
-        defaultValue: false
     })
     enabled?: boolean;
 
@@ -77,3 +45,4 @@ export class User extends Model {
     })
     updatedAt!: Date;
 }
+
