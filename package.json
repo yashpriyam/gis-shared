@@ -11,8 +11,10 @@
     "prepublishOnly": "npm run build"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+
   "dependencies": {
     "sequelize": "^6.3.5",
     "sequelize-typescript": "^2.1.2",

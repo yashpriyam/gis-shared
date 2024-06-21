@@ -3,7 +3,7 @@ import { User } from '../portal-models/user.model';  // Import all your models h
 
 const sequelize = new Sequelize({
     dialect: 'postgres',
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || 'portal-db',
     username: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASSWORD || 'password',
     database: process.env.DB_NAME || 'portal-db',
