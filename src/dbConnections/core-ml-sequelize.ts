@@ -2,12 +2,13 @@ import { Sequelize } from 'sequelize-typescript';
 import { NoUser } from '../core-ml-models/user.model';  // Import all your models here
 
 const sequelize = new Sequelize({
+    database: process.env.CORE_ML_DB_NAME || 'core_ml',
+    username: process.env.CORE_ML_DB_USER || 'user',
+    password: process.env.CORE_ML_DB_PASSWORD || 'password',
+    host: process.env.CORE_ML_DB_HOST || 'core-ml-db',
+    port: Number(process.env.CORE_ML_DB_PORT) || 5432,
     dialect: 'postgres',
-    host: process.env.DB_HOST || 'core-ml-db',
-    username: process.env.DB_USER || 'postgres',
-    password: process.env.DB_PASSWORD || 'password',
-    database: process.env.DB_NAME || 'portal-db',
-    models: [NoUser],  // Add your models here
-});
+    models: [NoUser],
+  });
 
 export default sequelize;
