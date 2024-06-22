@@ -1,10 +1,10 @@
 import { Table, Column, Model, DataType } from 'sequelize-typescript';
 
 @Table({
-    timestamps: true,
-    tableName: 'users'
+    tableName: 'uploads',
+    timestamps: true
 })
-export class User extends Model {
+export class Upload extends Model {
     @Column({
         type: DataType.INTEGER.UNSIGNED,
         autoIncrement: true,
@@ -14,52 +14,31 @@ export class User extends Model {
 
     @Column({
         type: DataType.STRING(255),
-        allowNull: false
-    })
-    name!: string;
-
-    @Column({
-        type: DataType.STRING(255),
-        allowNull: false,
-        unique: true
-    })
-    email!: string;
-
-    @Column({
-        type: DataType.STRING(255),
-        allowNull: false
-    })
-    password!: string;
-
-    @Column({
-        type: DataType.STRING(10),
-        allowNull: false
-    })
-    phone!: string;
-
-    @Column({
-        type: DataType.BOOLEAN,
-        allowNull: true,
-        defaultValue: true
-    })
-    online?: boolean;
-
-    @Column({
-        type: DataType.INTEGER,
         allowNull: true
     })
-    credits?: number;
+    blobId!: string;
 
     @Column({
-        type: DataType.BOOLEAN,
-        allowNull: true,
-        defaultValue: false
+        type: DataType.STRING(255),
+        allowNull: true
     })
-    enabled?: boolean;
+    mimetype!: string;
+
+    @Column({
+        type: DataType.STRING(255),
+        allowNull: true
+    })
+    checksum!: string;
+
+    @Column({
+        type: DataType.BIGINT.UNSIGNED,
+        allowNull: true
+    })
+    sizeInBytes!: number;
 
     @Column({
         type: DataType.BOOLEAN,
-        defaultValue: false
+        allowNull: true
     })
     deleted?: boolean;
 
