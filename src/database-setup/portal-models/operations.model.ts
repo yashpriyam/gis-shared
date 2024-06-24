@@ -13,7 +13,7 @@ import { Action, Resource } from "./index"; // Adjust the path based on your pro
 })
 export class Operation extends Model {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -21,14 +21,14 @@ export class Operation extends Model {
 
   @ForeignKey(() => Action)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   actionId!: number;
 
   @ForeignKey(() => Resource)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   resourceId!: number;

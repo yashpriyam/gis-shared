@@ -7,7 +7,7 @@ import { User } from './user.model';  // Adjust the import path as needed
 })
 export class Dataset extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -22,7 +22,7 @@ export class Dataset extends Model {
 
     @ForeignKey(() => User)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     userId!: number;

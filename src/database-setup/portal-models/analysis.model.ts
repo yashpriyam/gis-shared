@@ -6,14 +6,14 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 })
 export class Analysis extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
     id!: number;
 
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: true
     })
     mlApiRequestId?: number;
@@ -25,7 +25,7 @@ export class Analysis extends Model {
     status?: string;
 
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: true
     })
     completion?: number;

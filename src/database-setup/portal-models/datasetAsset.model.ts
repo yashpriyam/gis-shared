@@ -8,7 +8,7 @@ import { Dataset } from './dataset.model';  // Adjust the import path as needed
 })
 export class DatasetAsset extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -16,14 +16,14 @@ export class DatasetAsset extends Model {
 
     @ForeignKey(() => Upload)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     uploadId!: number;
 
     @ForeignKey(() => Dataset)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     datasetId!: number;

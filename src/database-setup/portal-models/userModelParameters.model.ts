@@ -7,7 +7,7 @@ import { UserModel } from './index';
 })
 export class UserModelParameter extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -15,19 +15,19 @@ export class UserModelParameter extends Model {
 
     @ForeignKey(() => UserModel)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     modelId!: number;
 
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: true
     })
     parameter?: number;
 
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: true
     })
     slug?: number;

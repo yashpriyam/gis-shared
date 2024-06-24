@@ -7,7 +7,7 @@ import { Domain } from './domain.model';  // Adjust the path as needed
 })
 export class Model extends SeqModel {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -22,7 +22,7 @@ export class Model extends SeqModel {
 
     @ForeignKey(() => Domain)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     domainId!: number;
