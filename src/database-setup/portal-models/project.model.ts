@@ -7,7 +7,7 @@ import { User } from './user.model'; // Adjust the path based on your project st
 })
 export class Project extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -28,7 +28,7 @@ export class Project extends Model {
 
     @ForeignKey(() => User)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     projectUserId!: number;

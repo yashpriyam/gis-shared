@@ -14,7 +14,7 @@ import { Workspace, Model } from "./index";
 })
 export class WorkspaceModel extends SeqModel {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -22,7 +22,7 @@ export class WorkspaceModel extends SeqModel {
 
   @ForeignKey(() => Workspace)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   workspaceId!: number;
@@ -32,7 +32,7 @@ export class WorkspaceModel extends SeqModel {
 
   @ForeignKey(() => Model)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   modelId!: number;

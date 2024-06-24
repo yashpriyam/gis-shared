@@ -8,7 +8,7 @@ import { User } from './user.model';  // Adjust the import path as needed
 })
 export class AnalysisComment extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -16,14 +16,14 @@ export class AnalysisComment extends Model {
 
     @ForeignKey(() => Analysis)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     analysisId!: number;
 
     @ForeignKey(() => User)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     userId!: number;

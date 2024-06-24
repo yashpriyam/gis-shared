@@ -14,7 +14,7 @@ import { Workspace, Assessment } from "./index";
 })
 export class WorkspaceAssessment extends Model {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -22,7 +22,7 @@ export class WorkspaceAssessment extends Model {
 
   @ForeignKey(() => Workspace)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   workspaceId!: number;
@@ -32,7 +32,7 @@ export class WorkspaceAssessment extends Model {
 
   @ForeignKey(() => Assessment)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   assessmentId!: number;

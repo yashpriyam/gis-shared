@@ -7,7 +7,7 @@ import { UserModel } from './index'; // Adjust the import path based on your pro
 })
 export class UserModelClass extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -22,7 +22,7 @@ export class UserModelClass extends Model {
 
     @ForeignKey(() => UserModel)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     modelId!: number;

@@ -6,20 +6,20 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 })
 export class ModelParameter extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
     id!: number;
 
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: true
     })
     parameter?: number;
 
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: true
     })
     slug?: number;

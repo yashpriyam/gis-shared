@@ -14,7 +14,7 @@ import { Role, Operation } from "./index"; // Adjust the path based on your proj
 })
 export class RolePermission extends Model {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -35,7 +35,7 @@ export class RolePermission extends Model {
 
   @ForeignKey(() => Role)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   roleId!: number;
@@ -45,7 +45,7 @@ export class RolePermission extends Model {
 
   @ForeignKey(() => Operation)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   operationId!: number;

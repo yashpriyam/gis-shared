@@ -6,7 +6,7 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 })
 export class Role extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })

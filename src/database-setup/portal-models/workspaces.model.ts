@@ -14,7 +14,7 @@ import { Project, Domain } from "./index";
 })
 export class Workspace extends Model {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -29,7 +29,7 @@ export class Workspace extends Model {
 
   @ForeignKey(() => Project)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   projectId!: number;
@@ -57,7 +57,7 @@ export class Workspace extends Model {
 
   @ForeignKey(() => Domain)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   domainId!: number;

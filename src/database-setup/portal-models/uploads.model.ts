@@ -6,7 +6,7 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 })
 export class Upload extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -31,7 +31,7 @@ export class Upload extends Model {
     checksum!: string;
 
     @Column({
-        type: DataType.BIGINT.UNSIGNED,
+        type: DataType.BIGINT,
         allowNull: true
     })
     sizeInBytes!: number;

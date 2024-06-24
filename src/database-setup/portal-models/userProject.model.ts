@@ -14,7 +14,7 @@ import { User, Project } from "./index";
 })
 export class UserProject extends Model {
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -22,14 +22,14 @@ export class UserProject extends Model {
 
   @ForeignKey(() => User)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   userId!: number;
 
   @ForeignKey(() => Project)
   @Column({
-    type: DataType.INTEGER.UNSIGNED,
+    type: DataType.INTEGER,
     allowNull: false,
   })
   projectId!: number;

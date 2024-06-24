@@ -7,7 +7,7 @@ import { UserModelDataset } from './index';
 })
 export class UserModelDatasetAnnotation extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -15,7 +15,7 @@ export class UserModelDatasetAnnotation extends Model {
 
     @ForeignKey(() => UserModelDataset)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     datasetId!: number;

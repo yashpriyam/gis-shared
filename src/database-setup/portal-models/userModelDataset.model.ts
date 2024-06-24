@@ -7,7 +7,7 @@ import { UserModel ,Upload} from './index';
 })
 export class UserModelDataset extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -15,14 +15,14 @@ export class UserModelDataset extends Model {
 
     @ForeignKey(() => UserModel)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     modelId!: number;
 
     @ForeignKey(() => Upload)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     uploadId!: number;

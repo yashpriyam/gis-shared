@@ -7,7 +7,7 @@ import { Project } from './project.model'; // Adjust the path based on your proj
 })
 export class ProjectTag extends Model {
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         autoIncrement: true,
         primaryKey: true
     })
@@ -15,7 +15,7 @@ export class ProjectTag extends Model {
 
     @ForeignKey(() => Project)
     @Column({
-        type: DataType.INTEGER.UNSIGNED,
+        type: DataType.INTEGER,
         allowNull: false
     })
     projectId!: number;
