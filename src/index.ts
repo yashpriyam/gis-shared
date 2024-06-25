@@ -1,4 +1,4 @@
 export * from "./database-setup"
 export * from "./exceptions"
-export * from "./winstonLogger"
-export * from "./BaseController"
+export { createLogger } from "./winstonLogger"
+export { BaseController } from "./BaseController"

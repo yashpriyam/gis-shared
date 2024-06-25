@@ -1,4 +1,4 @@
 import create from "./logger";
 import transports from "./transports";
 
-export default (serviceConfig: any) => create(transports(serviceConfig));
+export const createLogger = (serviceConfig: any) => create(transports(serviceConfig));

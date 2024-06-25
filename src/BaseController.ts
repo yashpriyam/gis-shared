@@ -1,4 +1,4 @@
-class BaseController {
+export class BaseController {
     constructor() {
 
     }
@@ -46,4 +46,4 @@ class BaseController {
     }
 }
 
-export default BaseController;
+// export default BaseController;
