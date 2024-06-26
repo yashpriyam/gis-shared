@@ -13,11 +13,6 @@ export class BaseController {
      *
      */
     response(res: any, data: any, status = 200) {
-        if (status != 200) {
-            data = {
-                message: data.message,
-            }
-        }
         res.status(status).json(data)
         return res.end()
     }
