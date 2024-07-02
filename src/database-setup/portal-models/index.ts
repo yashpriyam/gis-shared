@@ -30,3 +30,4 @@ export * from "./datasetAsset.model";
 export * from "./analysis.model";
 export * from "./analysisComments.model";
 export * from "./analysisArchive.model";
+export * from "./layerDetails.model";
